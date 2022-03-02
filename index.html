@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Loan Caculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+     crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css">
+
+    <style>
+        #loading, #results {
+            display: none;
+        }
+    </style>
+    
+  </head>
+  <body class="bg-dark">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6 mx-auto">
+                  <div class="card card-body text-center mt-5">
+                      <h1 class="heading display-5 pb-3 main-heading">Personal Loan Calculator</h1>
+                      <form  id="loan-form">
+                          <div class="form-group mb-3">
+                            <input type="text" class="form-control" name="" id="loanee" placeholder="Enter Loanee's name...">
+
+                          </div>
+                          <div class="form-group">
+                              <div class="input-group mb-3">
+                                  <span class="input-group-text">$</span>
+                                  <input type="number" class="form-control" name="" id="amount" placeholder="Enter Loan Amount...">
+                              </div>
+                          </div> 
+                          <div class="form-group">
+                              <div class="input-group mb-3">
+                                  <span class="input-group-text">%</span>
+                                  <input type="number" class="form-control" name="" id="interest" placeholder="Interest Rate">
+                              </div>
+                          </div> 
+                          <div class="form-group mb-3">
+                            <input type="number" class="form-control" name="" id="years" placeholder="Years to Repay">
+                          </div>
+                          <div class="form-group mb-3">
+                              <input type="submit" value="Calculate" class="btn form-control btn-dark btn-primary">
+                          </div>
+                      </form>
+                       <!-- LOADER-->
+                      <div id="loading">
+                          <img src="img/loading.gif" alt="">
+                      </div>
+
+        
+                       <!-- RESULTS -->
+                       <div id="results" class="pt-4">
+                           <h3 class = "heading display-10 pb-3">Loan Repayment Details</h3>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Name</span>
+                                <input type="text" class="form-control" name="" id="loanee-name" disabled>
+                            </div>
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Monthly Payment</span>
+                                <input type="number" class="form-control" name="" id="monthly-payment" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Total Payment</span>
+                                <input type="number" class="form-control" name="" id="total-payment" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Total Interest</span>
+                                <input type="number" class="form-control" name="" id="total-interest" disabled>
+                            </div>
+                        </div>
+
+                       </div>
+                        
+
+
+                  </div>
+              </div>
+          </div>
+      </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="app.js"></script>
+  </body>
+</html>
